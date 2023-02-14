@@ -1,0 +1,101 @@
+
+<div class="box">
+  <h1>{{maleOrFemmale(name) | titlecase}}</h1>
+  <div>
+    <div class="toggleSprite">
+      <a [class]="classActivate" (click)="toggle()">Normal</a>
+      <a [class]="classDesactivated" (click)="toggleShiny()">Shiny</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="sprites">
+      <img id="normal" *ngIf="show" src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="Pokemon default color">
+      <img id="shiny" *ngIf="!show" src="{{pokemon.sprites.other['official-artwork'].front_shiny}}" alt="Pokemon shiny">
+    </div>
+
+    <div class="flex pokedexData">
+      <h2 class="font-Title">Pokedex Data</h2>
+      <table class="pokemonInfo">
+        <tr>  
+          <th class="statName">National #</th>
+          <td>{{pokemon.id}}</td>
+        </tr>
+        <tr>
+          <th class="statName">Types</th>
+          <td>
+            <div *ngFor="let type of pokemon.types" class="{{type.type.name}}-background typeBox">
+              {{type.type.name | uppercase}}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="statName">Abilities</th>
+          <td>
+            <span *ngFor="let ability of abilitiesNames; index as i" >
+              <button class="buttonAbility" (click)="changeDescription(abilitiesInfo[i])">{{ability.replace("-"," ") | titlecase}}</button><br>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th class="statName">Species</th>
+          <td>{{pokedex.genera[5].genus}}</td>
+        </tr>
+        <tr>
+          <th class="statName">Height</th>
+          <td>{{pokemon.height/10 | number: '0.1-1'}} m</td>
+        </tr>
+        <tr>
+          <th class="statName">Weight</th>
+          <td>{{pokemon.weight/10 | number: '0.1-1'}} Kg</td>
+        </tr>
+      </table>
+    </div>
+  
+    <div class="flex">
+      <!-- <h2 class="font-Title">Breeding</h2>
+      <table class="pokemonInfo">
+        <tr>
+          <th class="statName">National #</th>
+          <td>{{pokemon.id}}</td>
+        </tr>
+        <tr>
+          <th>Egg Groups</th>
+        </tr>
+      </table> -->
+      <div class="flex">
+        <h3 class="font-Title">Ability Description</h3>
+        <div>
+          <p class="abilityText">{{text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tableBox">
+    <h4 class="font-Title">Base stats</h4>
+    <table class="statsTable">
+      <tBody>
+        <tr *ngFor="let stat of pokemon.stats">
+          <th class="statName">{{stat.stat.name.replace("-"," ") | titlecase}}</th>
+          <td class="statValue">{{stat.base_stat}}</td>
+          <td>
+            <div class="bar" [ngStyle]="{'width': stat.base_stat*5/9 +'%' , background: barColor(stat.base_stat)}"></div>
+          </td>
+        </tr>
+      </tBody>
+      <tFoot>
+        <th class="statName">Total</th>
+        <td class="statValue">{{total}}</td>
+      </tFoot>
+    </table>
+  </div>
+  <div class="pokedex">
+    <h4 class="font-Title">Pokédex</h4>
+    <div class="pokedexText"  [ngStyle]="{'background-color': backgroundPokedex() , 'border': pokemon.types.length > 1 ? borderPokedex() : '10px solid black'}">
+      <p>
+        {{pokedex.flavor_text_entries[indexPokedex].flavor_text}}
+      </p>
+    </div>
+  </div>
+</div>

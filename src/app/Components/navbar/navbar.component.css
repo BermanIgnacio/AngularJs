@@ -1,0 +1,42 @@
+a{
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 2px 8px;
+  font-size: 2rem;
+  box-shadow: 3px 4px gray;
+}
+a:active{
+  box-shadow: 2px 2px darkgrey;
+}
+
+li{
+  list-style: none;
+  margin-left: 10px;
+}
+
+li:active{
+  transform: translate(3px, 2px);
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  margin: auto 0px;
+}
+
+img{
+  width: 40px;
+  margin: 0px 8px 10px 5px;
+}
+
+.navBar{
+  background-color: white;
+  margin: 25px 25px;
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  align-items: center;
+  border-radius: 15px;
+}

@@ -1,0 +1,144 @@
+:root {
+  --normal: #aaaa99;
+  --fire: #ff4422;
+  --water: #3399ff;
+  --electric: #ffcc33;
+  --grass: #77cc55;
+  --ice: #66ccff;
+  --fighting: #bb5544;
+  --poison: #aa5599;
+  --ground: #ddbb55;
+  --flying: #8899ff;
+  --psychic: #ff5599;
+  --bug: #aabb22;
+  --rock: #bbaa66;
+  --ghost: #6666bb;
+  --dragon: #7766ee;
+  --dark: #775544;
+  --steel: #aaaabb;
+  --fairy: #ee99ee;
+}
+
+.center{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  font-size: 55px;
+  font-weight: 1200;
+}
+
+.loading{
+  border-radius: 75px;
+  margin: 35px auto;
+  background-color: white;
+  width: 950px;
+  height: 250px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  background-color: white;
+  gap: 5px;
+  padding: 25px;
+  border-radius: 75px;
+  margin: 35px auto;
+  width: 85%;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  align-items: center;
+  border: 1px solid #bebebe ;
+  border-radius: 10px;
+  width: 100%;
+}
+
+p{
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.sprite{
+  width: 90%;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.space{
+  margin: 0px 5px;
+  color: rgb(173, 171, 171);
+  padding: 0px;
+  font-weight: 800;
+}
+
+.id{
+  color: gray;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+
+
+.normal-font{
+  color: var(--normal);
+}
+.fire-font{
+  color: var(--fire);
+}
+.water-font{
+  color: var(--water);
+}
+.electric-font{
+  color: var(--electric);
+}
+.grass-font{
+  color: var(--grass);
+}
+.ice-font{
+  color: var(--ice);
+}
+.fighting-font{
+  color: var(--fighting);
+}
+.poison-font{
+  color: var(--poison);
+}
+.ground-font{
+  color: var(--ground);
+}
+.flying-font{
+  color: var(--flying);
+}
+.psychic-font{
+  color: var(--psychic);
+}
+.bug-font{
+  color: var(--bug);
+}
+.rock-font{
+  color: var(--rock);
+}
+.ghost-font{
+  color: var(--ghost);
+}
+.dragon-font{
+  color: var(--dragon);
+}
+.dark-font{
+  color: var(--dark);
+}
+.steel-font{
+  color: var(--steel);
+}
+.fairy-font{
+  color: var(--fairy);
+}

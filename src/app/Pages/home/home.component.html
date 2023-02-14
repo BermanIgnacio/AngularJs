@@ -1,0 +1,19 @@
+<div *ngIf="!loading" class="loading d-flex justify-content-center">
+  <div class="spinner-border center" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<div *ngIf="loading" class="grid">
+  <div class="card yelow" *ngFor="let pokemon of pokemons">
+    <img class="sprite" src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
+    <p>{{pokemon.name | titlecase}}</p>
+    <span class="id">#{{pokemon.id | number: '3.0-1'}}</span>
+    <div class="flex">
+      <div class="{{pokemon.types[0].type.name}}-font">{{pokemon.types[0].type.name | titlecase}}</div>
+      <div *ngIf="pokemon.types.length > 1" class="space" >·</div>
+      <div *ngIf="pokemon.types.length > 1" class="{{pokemon.types[1].type.name}}-font">{{pokemon.types[1].type.name | titlecase}}</div>
+    </div>
+    <app-button-pokeball [name] = orignalNames(pokemon.name)  ></app-button-pokeball>
+  </div>
+</div>
+<app-footer></app-footer>
