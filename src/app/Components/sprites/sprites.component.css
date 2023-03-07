@@ -1,59 +1,7 @@
-@font-face {
-  font-family: "pixelFont";
-  src: url(../../../assets/fonts/PressStart2P-Regular.ttf)
-}
-
-@font-face {
-  font-family: "Audiowide";
-  src: url(../../../assets/fonts/Audiowide-Regular.ttf)
-}
-
 img{
   width: 100%;
   border-radius: 8px;
   opacity: 0.7;
-}
-
-p{
-  margin: 0px;
-}
-
-/*********************************Configuracion Generales*********************************/
-
-
-/*********************************configuracion de contenedores principales*********************************/
-
-.box{
-  background-image: url(../../../assets/pictures/detallePokedex.png);
-  width: 1000px;
-  height: 900px;
-  margin: auto;
-}
-
-.mainContainer{
-  justify-content: space-between;
-  padding-top: 21%;
-  margin-right: 5%;
-  height: 100%;
-}
-
-.leftSide{
-  margin-left: 6%;
-  display: grid;
-  grid-template-rows: 450px 200px;
-}
-
-.rightSide{
-  margin-left: 13.5%;
-  display: grid;
-  grid-template-rows: 158px 71.1px 71.1px 336px;
-}
-
-/*********************************Configuracion elementos gridCell1*********************************/
-
-.basicInfo{
-  display: grid;
-  grid-template-rows: 20.4% 10%;
 }
 
 .imgBox{
@@ -98,7 +46,7 @@ p{
 .actionButtons{
   width: 75%;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 19%;
   margin-left: 15%;
 }
 
@@ -256,34 +204,6 @@ p{
   height:20px;
 }
 
-/*********************************Configuracion elementos gridCell2*********************************/
-
-.specieBox{
-  width: 88%;
-  font-size: 12px;
-}
-
-.bodyMeasurement{
-  font-size: 12px;
-}
-
-/*********************************Configuracion Pantalla Pokedex*********************************/
-
-.pokedex{
-  padding: 10px 8px;
-  width: 385px;
-  height: 110px;
-  border-radius: 25px;
-}
-
-.pokedexText{
-  font-size: 12px;
-  text-align: center;
-
-}
-.pokedexText p{
-  margin: 0;
-}
 
 /*********************************Estilos de fondos segun tipo de pokemon*********************************/
 

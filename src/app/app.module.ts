@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ButtonPokeballComponent } from './Components/button-pokeball/button-pokeball.component';
+import { StatComponent } from './Components/stat/stat.component';
+import { AbilitiesComponent } from './Components/abilities/abilities.component';
+import { SpritesComponent } from './Components/sprites/sprites.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ButtonPokeballComponent } from './Components/button-pokeball/button-pok
     NavbarComponent,
     FooterComponent,
     ButtonPokeballComponent,
+    StatComponent,
+    AbilitiesComponent,
+    SpritesComponent,
   ],
   imports: [
     BrowserModule,

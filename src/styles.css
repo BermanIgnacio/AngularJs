@@ -1,26 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial,sans-serif;
-  --normal: #aaaa99;
-  --fire: #ff4422;
-  --water: #3399ff;
-  --electric: #ffcc33;
-  --grass: #77cc55;
-  --ice: #66ccff;
-  --fighting: #bb5544;
-  --poison: #aa5599;
-  --ground: #ddbb55;
-  --flying: #8899ff;
-  --psychic: #ff5599;
-  --bug: #aabb22;
-  --rock: #bbaa66;
-  --ghost: #6666bb;
-  --dragon: #7766ee;
-  --dark: #775544;
-  --steel: #aaaabb;
-  --fairy: #ee99ee;
+  --normal: 170, 170, 153;
+  --fire: 255, 68, 34;
+  --water: 51, 153, 255;
+  --electric: 255, 204, 51;
+  --grass: 119, 204, 85;
+  --ice: 102, 204, 255;
+  --fighting: 187, 85, 68;
+  --poison: 170, 85, 153;
+  --ground: 166, 116, 58;
+  --flying: 146, 170, 222;
+  --psychic: 255, 85, 153;
+  --bug: 170, 187, 34;
+  --rock: 187, 170, 102;
+  --ghost: 102, 102, 187;
+  --dragon: 9, 109, 196;
+  --dark: 119, 85, 68;
+  --steel: 90, 142, 161;
+  --fairy: 238, 153, 238;
+  --bg: #000000;
+	--text: #ffffff;
 }
-
 
 body{
   background-color: #282c34;
@@ -28,4 +29,38 @@ body{
 
 html {
   scroll-behavior: smooth;
+}
+
+p{
+  margin: 0px;
+}
+
+.textBox{
+  background-color: #032d29;
+  color: #f4dc22;
+  font-family: pixelFont;
+  background : radial-gradient(#032d29 0.5px, #282c34 0.1px) 0 0 / 5px 5px;
+  opacity: 0.9;
+}
+
+.infoBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+
+.title{
+  font-family: Audiowide;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.flex{
+  display: flex;
+}
+
+.alingCenter{
+  align-items: center;
 }

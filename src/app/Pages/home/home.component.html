@@ -4,14 +4,12 @@
   </div>
 </div>
 <div *ngIf="loading" class="grid">
-  <div class="card yelow" *ngFor="let pokemon of pokemons">
+  <div class="card yelow" *ngFor="let pokemon of pokemons" [style]="getBackground(pokemon.types)" >
+    <span class="id">#{{pokemon.id | number: '3.0-1'}}</span>
     <img class="sprite" src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="">
     <p>{{pokemon.name | titlecase}}</p>
-    <span class="id">#{{pokemon.id | number: '3.0-1'}}</span>
-    <div class="flex">
-      <div class="{{pokemon.types[0].type.name}}-font">{{pokemon.types[0].type.name | titlecase}}</div>
-      <div *ngIf="pokemon.types.length > 1" class="space" >·</div>
-      <div *ngIf="pokemon.types.length > 1" class="{{pokemon.types[1].type.name}}-font">{{pokemon.types[1].type.name | titlecase}}</div>
+    <div class="flexContainer">
+      <div *ngFor="let type of geticons(pokemon.types)"><img class="icon" src="../../../assets/pictures/icons/{{type}}.png" alt=""></div>
     </div>
     <app-button-pokeball [name] = orignalNames(pokemon.name)  ></app-button-pokeball>
   </div>

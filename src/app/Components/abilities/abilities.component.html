@@ -1,0 +1,15 @@
+<div class="abilities">
+  <samp class="title">Habilidades</samp>
+  <div class="flex buttonAbility">
+    <span class="buttonStyle" *ngFor="let ability of abilitiesNames; index as i" >
+      <a (click)="changeDescription(abilitiesInfo[i])">{{ability.replace("-"," ") | titlecase}}</a>
+    </span>
+  </div>
+</div>
+
+<div class="abilityDescrition">
+  <samp class="title">Descripcion de Habilidad</samp>
+  <div class="textBox infoBox">
+    <p class="flex alingCenter abilityText">{{text}}</p>
+  </div>
+</div>

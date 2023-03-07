@@ -1,0 +1,54 @@
+a{
+  padding: 2px 0;
+}
+
+.abilities{
+  align-self: start;
+}
+
+.buttonAbility {
+  font-family: Audiowide;
+  justify-content: left;
+  margin-top: 63px;
+  margin-left: 80px;
+}
+
+.buttonStyle {
+  transform: rotate(-60deg);
+  color: black;
+  background-color: #31a7f1;
+  box-shadow: -3px 3px #2165ec;
+  padding: 3px 4px;
+  border-radius: 8px;
+  margin: 0 -40px;
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+} 
+
+.buttonStyle:hover{
+  background-color: #3cb4ff;
+  outline: 0;
+}
+
+.buttonStyle:active{
+  transform: translate(2px, 2px) rotate(-60deg);
+  box-shadow: -1px 1px #2165ec;
+}
+
+.buttonStyle a{
+  display:block;
+  cursor:pointer;
+}
+
+.abilityDescrition{
+  margin-top: 80px;
+}
+
+.abilityText{
+  padding: 0px 15px;
+  text-align: center;
+  font-size: 15px;
+  height: 75px;
+  font-size: 12px;
+}

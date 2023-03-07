@@ -7,8 +7,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
+
   myForm:FormGroup;
+
   constructor(
   private fb:FormBuilder) {
     this.myForm = this.fb.group({

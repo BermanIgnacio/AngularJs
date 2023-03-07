@@ -1,83 +1,42 @@
-<div class="box">
-  <div class="grid">
-    <div class="gridCell1">
-      <div class="imgBox"> 
-        <img id="normal" *ngIf="!shiny && !pixel" src="{{pokemon.sprites.other['official-artwork'].front_default}}" alt="Pokemon default color">
-        <img id="shiny"  *ngIf="shiny && !pixel" src="{{pokemon.sprites.other['official-artwork'].front_shiny}}" alt="Pokemon shiny">
-        <img id="pixel"  *ngIf="!shiny && pixel" src="{{pokemon.sprites.front_default}}" alt="Pokemon default color">
-        <img id="pixelShiny"  *ngIf="shiny && pixel" src="{{pokemon.sprites.front_shiny}}" alt="Pokemon shiny">
-      </div>
-  
-      <div class="nameBox textBox">
-        <p>N° {{pokemon.id | number: '3.0-1'}}</p>
-        <p>{{maleOrFemmale(name) | titlecase}}</p>
-      </div>
+<div *ngIf="!loading" class="loading d-flex justify-content-center">
+  <div class="spinner-border center" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
 
-      <div class="actionButtons">
-        <div class="cryBox">
-          <button id="buttonCries" (click)="playCry()"></button>
-        </div>
-    
-        <div class="dpad">
-          <div class="up"><i class="fa fa-caret-up" (click)="toggleToArtwork()"></i></div>
-          <div class="right"><i class="fa fa-caret-right" (click)="toggleToShiny()"></i></div>
-          <div class="down"><i class="fa fa-caret-down" (click)="toggleToPixel()"></i></div>
-          <div class="left"><i class="fa fa-caret-left" (click)="toggleToNormal()"></i></div>
-          <div class="middle"></div>
-        </div>
-      </div>
+<div *ngIf="loading" class="box">
+  <div *ngIf="!loading textBox"></div>
+  <div *ngIf="loading" class="mainContainer flex">
+    <div class="leftSide alingCenter">
+
+      <app-sprites [name]="name" [id]="pokemon.id" [types]="pokemon.types" [sprites]="pokemon.sprites"></app-sprites>
+      <app-stat [stats]="pokemon.stats"></app-stat> 
       
-      <div class="stats textBox">
-        <div class="statsRow" *ngFor="let stat of pokemon.stats">
-          <span class="statName">{{stat.stat.name}}</span>
-          <span class="statValue">{{stat.base_stat}}</span>
-          <div class="bar" [ngStyle]="{'width': stat.base_stat*3/2 +'px' , background: barColor(stat.base_stat)}"></div>
-        </div>
-    
-        <div class="statsRow">
-          <div class="statName">Total</div>
-          <div class="statValue">{{total}}</div>
-        </div>
-      </div>
     </div>
 
-    <div class="gridCell2">
-
-      <div class="size">
-        <div class="textBox"><p>Height: {{pokemon.height/10 | number: '0.1-1'}} M</p></div>
-        <div class="textBox"><p>Weight: {{pokemon.weight/10 | number: '0.1-1'}} Kg</p></div>
-      </div>
-      
-      <div class="types">
-        <div class="specie"><p>{{pokedex.genera[5].genus}}</p></div>
-        <div *ngFor="let type of pokemon.types" class="{{type.type.name}}-background typeBox">
-          {{type.type.name | uppercase}}
-        </div>
-      </div>
-      
-      <div class="abilities">
-        <span *ngFor="let ability of abilitiesNames; index as i" >
-          <button class="buttonAbility" (click)="changeDescription(abilitiesInfo[i])">{{ability.replace("-"," ") | titlecase}}</button><br>
-        </span>
-      </div>
-
-      <div class="pokedex textBox">
-        <div class="pokedexText">
+    <div class="rightSide alingCenter">
+      <div class="pokedexBox">
+        <samp class="title">Pokedex</samp>
+        <div class="flex alingCenter pokedex pokedexText textBox">
           <p>
             {{pokedex.flavor_text_entries[indexPokedex].flavor_text}}
           </p>
         </div>
       </div>
+
+      <div class="specieBox">
+        <samp class="title">Especie</samp>
+        <p class="textBox infoBox">{{pokedex.genera[5].genus}}</p>
+      </div>
+
+      <div class="bodyMeasurement">
+        <samp class="title">Medidas</samp>
+        <div class="textBox infoBox">
+          <p>Altura: {{pokemon.height/10 | number: '0.1-1'}} M</p>
+          <p>Peso: {{pokemon.weight/10 | number: '0.1-1'}} Kg</p>
+        </div>
+      </div>
+      <app-abilities [abilities]="pokemon.abilities"></app-abilities>
     </div>
   </div>
-
-
- 
-
- 
-
-  <div class=""></div>
-  <div class=""></div>
-  <div class=""></div>
-
 </div>

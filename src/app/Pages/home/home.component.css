@@ -41,7 +41,7 @@
   background-color: white;
   gap: 5px;
   padding: 25px;
-  border-radius: 75px;
+  border-radius: 20px;
   margin: 35px auto;
   width: 85%;
 }
@@ -67,7 +67,7 @@ p{
   width: 90%;
 }
 
-.flex{
+.flexContainer{
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
@@ -83,62 +83,13 @@ p{
 .id{
   color: gray;
   font-weight: bolder;
-  font-size: 12px;
+  font-size: 18px;
 }
 
+.types{
 
+}
 
-.normal-font{
-  color: var(--normal);
-}
-.fire-font{
-  color: var(--fire);
-}
-.water-font{
-  color: var(--water);
-}
-.electric-font{
-  color: var(--electric);
-}
-.grass-font{
-  color: var(--grass);
-}
-.ice-font{
-  color: var(--ice);
-}
-.fighting-font{
-  color: var(--fighting);
-}
-.poison-font{
-  color: var(--poison);
-}
-.ground-font{
-  color: var(--ground);
-}
-.flying-font{
-  color: var(--flying);
-}
-.psychic-font{
-  color: var(--psychic);
-}
-.bug-font{
-  color: var(--bug);
-}
-.rock-font{
-  color: var(--rock);
-}
-.ghost-font{
-  color: var(--ghost);
-}
-.dragon-font{
-  color: var(--dragon);
-}
-.dark-font{
-  color: var(--dark);
-}
-.steel-font{
-  color: var(--steel);
-}
-.fairy-font{
-  color: var(--fairy);
+.icon{
+  width: 32px;
 }

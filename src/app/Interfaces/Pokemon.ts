@@ -13,16 +13,16 @@ interface OtherSprite{
   front_shiny: string;
 }
 
-interface Stats{
+export interface Stats{
   base_stat: number;
   stat: {name: string};
 }
 
-interface Types{
+export interface Types{
   type: NameUrl;
 }
 
-interface Sprites{
+export interface Sprites{
   front_default: string;
   front_female:	string;
   front_shiny:	string;
@@ -32,7 +32,7 @@ interface Sprites{
   }
 }
 
-interface AbilityDetail{
+export interface AbilityDetail{
   ability: NameUrl;
   is_hidden:boolean;
   slot:number;

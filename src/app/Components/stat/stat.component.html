@@ -1,0 +1,15 @@
+<div class="statsBox">
+  <samp class="title">Estadisticas</samp>
+  <div class="stats textBox">
+    <div class="statsRow" *ngFor="let stat of stats">
+      <span class="statName">{{stat.stat.name}}</span>
+      <span class="statValue">{{stat.base_stat}}</span>
+      <div class="bar" [ngStyle]="{'width': stat.base_stat*3/2 +'px' , background: barColor(stat.base_stat)}"></div>
+    </div>
+
+    <div class="statsRow">
+      <div class="statName">Total</div>
+      <div class="statValue">{{getTotal()}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="basicInfo">
+  <div class="flex">
+
+    <div class="imgBox"> 
+      <img id="normal" *ngIf="!shiny && !pixel" src="{{sprites.other['official-artwork'].front_default}}" alt="Pokemon default color">
+      <img id="shiny"  *ngIf="shiny && !pixel" src="{{sprites.other['official-artwork'].front_shiny}}" alt="Pokemon shiny">
+      <img id="pixel"  *ngIf="!shiny && pixel" src="{{sprites.front_default}}" alt="Pokemon default color">
+      <img id="pixelShiny"  *ngIf="shiny && pixel" src="{{sprites.front_shiny}}" alt="Pokemon shiny">
+    </div>
+    
+    <div class="typesContainer">
+      <div *ngFor="let type of types" class="{{type.type.name}}-background typeBox">
+        {{type.type.name | uppercase}}
+      </div>
+    </div>
+  </div>
+
+  <div class="nameBox textBox infoBox">
+    <p>N° {{id | number: '3.0-1'}}</p>
+    <p>{{maleOrFemmale(name) | titlecase}}</p>
+  </div>
+</div>
+
+<div class="actionButtons flex">
+  <div class="cryBox">
+    <button id="buttonCries" (click)="playCry()"></button>
+  </div>
+
+  <div class="dpad">
+    <div class="up"><i class="fa fa-caret-up" (click)="toggleToArtwork()"></i></div>
+    <div class="right"><i class="fa fa-caret-right" (click)="toggleToShiny()"></i></div>
+    <div class="down"><i class="fa fa-caret-down" (click)="toggleToPixel()"></i></div>
+    <div class="left"><i class="fa fa-caret-left" (click)="toggleToNormal()"></i></div>
+    <div class="middle"></div>
+  </div>
+</div>
